@@ -1,0 +1,12 @@
+name: Unit-Test
+
+on: push
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Composer Dependencies
+        run: composer create-project symfony/skeleton my_test_project
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3

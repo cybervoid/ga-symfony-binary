@@ -8,6 +8,10 @@ jobs:
     steps:
       - name: Create an empty symfony project
         run: composer create-project symfony/skeleton my_test_project
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
       #      - name: Setup tmate session
       #        uses: mxschmitt/action-tmate@v3
       - name: Check for vulnerabilities
